@@ -117,3 +117,11 @@ Processing by Api::V1::TodosController#index as HTML
 Completed 200 OK in 41ms (Views: 24.4ms | ActiveRecord: 7.1ms | Allocations: 5607)
 
 
+Started GET "/api/v1/todos" for 172.20.0.1 at 2023-03-19 02:22:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (1.0ms)[0m  [1m[34mSELECT `todos`.* FROM `todos`[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:3:in `index'
+Completed 200 OK in 73ms (Views: 16.0ms | ActiveRecord: 25.2ms | Allocations: 7994)
+
+
