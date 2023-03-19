@@ -44,6 +44,8 @@ services:
     command: sh -c "yarn start"
     ports:
       - "3000:3000"
+    depends_on:
+      - api
 volumes:
   public-data:
   tmp-data:
