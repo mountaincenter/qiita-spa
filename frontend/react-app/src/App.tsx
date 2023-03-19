@@ -26,10 +26,12 @@ const App: React.FC = () => {
   useEffect(() => {
     handleGetTodos()
   }, [])
+  console.log(process.env.REACT_APP_NODE_ENV)
 
   return (
     <>
       <h1>Todo App</h1>
+      <p>{process.env.REACT_APP_NODE_ENV}</p>
       <TodoForm todos={todos} setTodos={setTodos} />
       <TodoList todos={todos} setTodos={setTodos} />
     </>

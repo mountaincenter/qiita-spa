@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const client = axios.create({
-  baseURL: "http://localhost:80/api/v1"
+  baseURL: process.env.REACT_APP_NODE_ENV === "development" ? "http://localhost/api/v1" : "https://api.ymnk.fun/"
 })
 
 export default client
